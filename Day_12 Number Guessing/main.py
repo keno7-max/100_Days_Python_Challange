@@ -1,10 +1,8 @@
 from random import randint
 from art import logo
 
-
 EASY_LEVEL_TURNS = 10
 HARD_LEVEL_TURNS = 5
-
 
 def check_answer(user_guess, actual_answer, turns):
     """Checks answer against guess, returns the number of turns remaining."""
@@ -17,14 +15,12 @@ def check_answer(user_guess, actual_answer, turns):
     else:
         print(f"You got it! The answer was {actual_answer}")
 
-
 def set_difficulty():
     level = input("Choose a difficulty. Type 'easy' or 'hard': ")
     if level == "easy":
         return EASY_LEVEL_TURNS
     else:
         return HARD_LEVEL_TURNS
-
 
 def game():
     print(logo)
@@ -35,7 +31,6 @@ def game():
 
     turns = set_difficulty()
 
-   
     guess = 0
     while guess != answer:
         print(f"You have {turns} attempts remaining to guess the number.")
@@ -48,9 +43,6 @@ def game():
             return
         elif guess != answer:
             print("Guess again.")
-
-
-
 
 game()
 
